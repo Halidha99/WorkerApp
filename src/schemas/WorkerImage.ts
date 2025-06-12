@@ -6,7 +6,7 @@ export type WorkerImageDocument = WorkerImage & Document;
 @Schema()
 export class WorkerImage {
   @Prop({ required: true })
-  workerId: string; 
+  workerId: string;
 
   @Prop({ required: true })
   imageUrl: string;

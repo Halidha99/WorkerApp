@@ -1,13 +1,17 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { WorkerDetailsModule } from './workerDetails/WorkerDetails.module';
-import { WorkImageModule } from './WorkerImage/work-image.module';
+
+import { WorkImageModule } from './WorkerImage/WorkerImage.module';
+import { TeamModule } from './TeamDetails/TeamDetails.module';
+import { WorkerModule } from './worker/worker.module';
 
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb://127.0.0.1/workerApp'),
-    WorkerDetailsModule,
-    WorkImageModule, 
+  
+    WorkImageModule,
+    TeamModule,
+    WorkerModule,
   ],
   controllers: [],
   providers: [],

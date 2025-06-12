@@ -6,12 +6,9 @@ import { WorkerImageController } from './WorkerImage.controller';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([
-      { name: WorkerImage.name, schema: WorkerImageSchema },
-    ]),
+    MongooseModule.forFeature([{ name: WorkerImage.name, schema: WorkerImageSchema }]),
   ],
   providers: [WorkerImageService],
   controllers: [WorkerImageController],
-  exports: [WorkerImageService],
 })
-export class WorkerImageModule {}
+export class WorkImageModule {}
